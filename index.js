@@ -6,11 +6,11 @@ var PORT = process.env.PORT || DEFAULT_PORT;
 
 // App
 var app = express();
-app.get('/', function (req, res) {
+app.get('/', function (req, res, next) {
   if (!req.query.id) {
   res.send('Hello World!!\n');
 } else 
-{ res.end(500); }
+{ next(error); }
 } );
 
 app.listen(PORT)
