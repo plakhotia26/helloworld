@@ -9,7 +9,7 @@ var app = express();
 app.get('/', function (req, res) {
   if (!req.query.id) {
   res.send('Hello World!!\n');
-} else { throw req.query.id } );
+} );
 
 app.listen(PORT)
 console.log('Running on http://localhost:' + PORT);
