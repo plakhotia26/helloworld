@@ -7,8 +7,9 @@ var PORT = process.env.PORT || DEFAULT_PORT;
 // App
 var app = express();
 app.get('/', function (req, res) {
-  if (req.query.id) {
+  if (!req.query.id) {
   res.send('Hello World!!\n');
+  else { throw "no query id"; }
 } } );
 
 app.listen(PORT)
