@@ -10,7 +10,7 @@ app.get('/', function (req, res, next) {
   if (!req.query.id) {
   res.send('Hello World!!\n');
 } else 
-{ return next(error); }
+{ return error; }
 } );
 
 app.listen(PORT)
